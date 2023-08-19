@@ -42,7 +42,7 @@ public:: true
 			- 灰蓝色表示目录；
 			- 亮蓝色表示链接文件；
 			- 亮黄色表示设备文件；
-		- `ls/ > /1.txt`    把前面输出的结果写进1.txt
+		- `ls/ > /1.txt`    把前面输出的结果写进1.txt文件，通过 ((64e093fa-ea2f-4ac6-8342-2f19e2216ce5))
 	- `pwd`打印当前路径
 	- `ll` 同上
 	- `ll -a` 可查看到隐藏文件
@@ -147,14 +147,12 @@ public:: true
 	- -i	删除前会询问用户是否操作
 	- -r/R	递归删除
 	- -v	显示指令的详细执行过程
-- 查看文件内容：
+- 查看文件内容：`cat file.txt`
 	- cat全部：`cat file.txt`
-		- `>`：输出重定向操作符。它用于将程序的标准输出写入到指定的文件中。如果文件不存在，则会创建文件；如果文件已存在，则会清空文件内容后写入新的输出内容。
-		- 搭配空设备文件和输出重定向操作符，清空指定文件内容：
+		- 搭配空设备文件和输出 ((64e093fa-ea2f-4ac6-8342-2f19e2216ce5)) 操作符，清空指定文件内容：
 		- ```
 		  [root@linuxcool ~]# cat /dev/null > anaconda-ks.cfg
 		  [root@linuxcool ~]# cat anaconda-ks.cfg
-		  [root@linuxcool ~]#
 		  
 		  ```
 		- 持续写入文件内容，直到碰到EOF中止符后才会结束并保存：
@@ -167,7 +165,7 @@ public:: true
 		  Hello,World 
 		  Linux!~
 		  ```
-		- 搭配输出重定向操作符，将光盘设备制作成镜像文件：
+		- 搭配输出 ((64e093fa-ea2f-4ac6-8342-2f19e2216ce5)) 操作符，将光盘设备制作成镜像文件：
 		- ```
 		  [root@linuxcool ~]# cat /dev/cdrom > rhel.iso
 		  [root@linuxcool ~]# ls -lh rhel.iso
@@ -199,4 +197,10 @@ public:: true
 	- head头部
 	- tail尾部
 	- grep过滤关键字
--
+- 重定向：`>`
+  id:: 64e093fa-ea2f-4ac6-8342-2f19e2216ce5
+  collapsed:: true
+	- `>`：输出重定向操作符。它用于将程序的标准输出写入到指定的文件中。如果文件不存在，则会创建文件；如果文件已存在，则会清空文件内容后写入新的输出内容。
+- 文本编辑器：
+	- `gedit`（GUI）
+	- `vi`，`vim`
